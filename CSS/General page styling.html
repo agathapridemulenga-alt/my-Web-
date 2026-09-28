@@ -1,0 +1,234 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Header */
+header {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+h2 {
+    color: #1f4e79;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: #333333;
+    padding: 12px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    background-color: #555555;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Repeated section styling */
+.content-section {
+    background-color: #f4f8fb;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* Unique section styling */
+#hobbies {
+    border-left: 5px solid #1f4e79;
+}
+
+/* Lists */
+ol,
+ul {
+    line-height: 1.8;
+}
+
+/* Photo gallery */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-gallery figure {
+    margin: 0;
+    flex: 1 1 250px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.photo-gallery figcaption {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Video and audio */
+video,
+audio {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #999999;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f4e79;
+    color: white;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Contact form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit button */
+button {
+    background-color: #1f4e79;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #163a5a;
+}
+
+button:focus {
+    outline: 3px solid #8ecae6;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .content-section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    th,
+    td {
+        padding: 7px;
+        font-size: 14px;
+    }
+}
