@@ -1,16 +1,285 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <body>
-            <h1>Welcome to Web Programming</h1>
-            <h2>Agatha Mulenga - Student ID: 202501442</h2>
+<html lang="en">
 
-            <h3>My top hobbies</h3>
-            <ul>
-                <li>Singing</li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agatha Mulenga | Web Programming Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Load JavaScript with defer so the DOM is ready before execution -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>Agatha Mulenga</h1>
+        <p class="subtitle">Bachelor in Computer Science &mdash; Mulungushi University</p>
+        <p class="intro-line">
+            Welcome to my interactive student portfolio. I am a second-year
+            Computer Science student passionate about coding, data and
+            building useful web experiences.
+        </p>
+
+        <!-- Intro area with a clear action button -->
+        <a class="cta-button" href="#skills">View My Projects</a>
+
+        <!-- Mobile navigation toggle button -->
+        <button id="nav-toggle" class="nav-toggle" type="button"
+                aria-expanded="false" aria-controls="main-nav">
+            ☰ Menu
+        </button>
+    </header>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning-plan">My Learning Plan</a>
+        <a href="#skills">My Skills</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- ABOUT ME -->
+        <section class="content-section" id="about">
+            <h2>About Me</h2>
+            <p>
+                Agatha Mulenga is a creative and warm-hearted individual who finds joy in singing,
+                cooking, and watching movies. Music lets her express emotion, cooking fuels her 
+                creativity in the kitchen, and films inspire her imagination. Thoughtful and hardworking,
+                she balances her passions with personal growth, always eager to learn new skills, connect
+                with others, and bring positivity wherever she goes.
+            </p>
+        </section>
+
+        <!-- HOBBIES -->
+        <section class="content-section" id="hobbies">
+            <h2>My Hobbies</h2>
+            <ul class="hobby-list">
+                <li>singing</li>
+                <li>cooking</li>
                 <li>Watching movies</li>
-                <li>Cooking</li>
             </ul>
-        </body>
-    </head>
+        </section>
+
+        <!-- LEARNING PLAN -->
+        <section class="content-section" id="learning-plan">
+            <h2>My Learning Plan</h2>
+            <p>
+                My learning plan will help me improve my web development,data interpretation and machine learning skills.
+            </p>
+
+            <h3>Steps I Will Take to Improve My Web Skills</h3>
+            <ol>
+                <li>Practice HTML and CSS by building small web pages regularly.</li>
+                <li>Learn from other people and apply what I learn through practice.</li>
+                <li>Practice interpreting data.</li>
+            </ol>
+
+            <p>
+                Useful Web Development Resource:
+                <a href=" https://edurole.mu.ac.zm/"
+                   target="_blank" rel="noopener">
+                    Learn Web Development with MDN
+                </a>
+            </p>
+
+            <table>
+                <caption>My Weekly Web Learning Plan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML</td>
+                        <td>Practice creating semantic HTML sections and navigation links.</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>Practice styling sections, links, images and forms.</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Data Interpretation and Machine Learning</td>
+                        <td>Practice interpreting simple datasets and learn basic machine learning concepts.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SKILLS / PROJECTS  (NEW SECTION — required by Part B) -->
+        <section class="content-section" id="skills">
+            <h2>My Skills &amp; Projects</h2>
+            <p>These are the practical skills I have been developing during my studies.</p>
+
+            <!-- Project filter / search (JS Feature) -->
+            <div class="filter-controls">
+                <label for="project-search">Search skills:</label>
+                <input type="search" id="project-search" placeholder="Type a keyword e.g. HTML">
+
+                <label for="project-filter">Filter by level:</label>
+                <select id="project-filter">
+                    <option value="all">All levels</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <button type="button" id="reset-filter" class="btn-secondary">Reset</button>
+            </div>
+
+            <p id="filter-message" class="filter-message" aria-live="polite"></p>
+
+            <!-- Project cards list -->
+            <div class="project-grid" id="project-grid">
+
+                <article class="project-card" data-level="Beginner">
+                    <h3>HTML5 Structure</h3>
+                    <p class="project-level">Level: Beginner</p>
+                    <p>Building semantic web pages using header, nav, main, section and footer.</p>
+                </article>
+
+                <article class="project-card" data-level="Intermediate">
+                    <h3>CSS3 Styling &amp; Responsive Design</h3>
+                    <p class="project-level">Level: Intermediate</p>
+                    <p>Creating readable layouts, colour palettes and mobile-friendly views with media queries.</p>
+                </article>
+
+                <article class="project-card" data-level="Intermediate">
+                    <h3>JavaScript Interactivity</h3>
+                    <p class="project-level">Level: Intermediate</p>
+                    <p>Handling user events, DOM updates and form validation for interactive websites.</p>
+                </article>
+
+                <article class="project-card" data-level="Beginner">
+                    <h3>Data Interpretation</h3>
+                    <p class="project-level">Level: Beginner</p>
+                    <p>Reading simple datasets and drawing meaningful conclusions from the numbers.</p>
+                </article>
+
+                <article class="project-card" data-level="Advanced">
+                    <h3>Machine Learning Fundamentals</h3>
+                    <p class="project-level">Level: Advanced</p>
+                    <p>Studying the basic concepts behind training models to make predictions.</p>
+                </article>
+
+<section class="content-section" id="photos">
+    <h2>My Photos</h2>
+
+    <div class="photo-gallery">
+        <figure>
+            <img src="My pictures/pic1.jpg" width = "300">
+        </figure>
+            <img src="My pictures/pic2.jpg" width ="300">
+        <figure>
+            <img src="My pictures/pic3.jpg" width = "300">
+        </figure>
+    </div>
+</section>
+
+        <!-- MEDIA -->
+        <section class="content-section" id="media">
+            <h2>My Media</h2>
+
+            <h3>My Introduction Video</h3>
+            <video controls preload="metadata">
+                <source src="My video/Video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <p>
+                This video introduces me, my Bachelor in Computer Science
+                programme, and the web development skill I hope to improve.
+            </p>
+            <p>
+                Video summary: I introduced myself as Agatha Mulenga, a
+                second-year Bachelor in Computer Science student at
+                Mulungushi University.
+            </p>
+
+            <h3>My Audio Recording</h3>
+            <audio controls preload="metadata">
+                <source src="My video/audio.mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <p>
+                Audio summary: I describe coding as one of my hobbies and
+                explain why I am interested in studying web technologies.
+            </p>
+        </section>
+
+        <!-- STUDY HOURS CALCULATOR (JS Feature) -->
+        <section class="content-section" id="study-calculator">
+            <h2>Study Hours Calculator</h2>
+            <p>Estimate your total weekly study hours.</p>
+
+            <form id="study-form" novalidate>
+                <label for="hours-per-day">Planned hours per day:</label>
+                <input type="number" id="hours-per-day" name="hoursPerDay"
+                       min="0" step="0.5" placeholder="e.g. 2" required>
+
+                <label for="days-per-week">Days per week (1&ndash;7):</label>
+                <input type="number" id="days-per-week" name="daysPerWeek"
+                       min="1" max="7" step="1" placeholder="e.g. 5" required>
+
+                <button type="submit">Calculate Total</button>
+            </form>
+
+            <p id="study-result" class="study-result" aria-live="polite"></p>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="content-section" id="contact">
+            <h2>Contact</h2>
+            <p class="form-note">
+                <strong>Browser demonstration only &mdash; no message is sent.</strong>
+            </p>
+
+            <form id="contact-form" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <p class="field-error" id="name-error" aria-live="polite"></p>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" name="topic">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <p class="field-error" id="message-error" aria-live="polite"></p>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Local preview area -->
+            <div id="form-preview" class="form-preview" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Regina Nabiye. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO"
+               target="_blank" rel="noopener">
+                View Source on GitHub
+            </a>
+        </p>
+    </footer>
+
+</body>
 </html>
