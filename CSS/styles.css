@@ -275,6 +275,53 @@ tr:nth-child(even) td {
     color: var(--muted);
     margin-top: 0;
 }
+/* =========================================================
+   PHOTOS + GALLERY
+   ========================================================= */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+figure {
+    margin: 0;
+    text-align: center;
+}
+.photo-gallery img,
+.gallery-figure img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+.gallery-viewer {
+    text-align: center;
+}
+.gallery-figure {
+    max-width: 520px;
+    margin: 0 auto;
+}
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+}
+.gallery-counter {
+    font-weight: 700;
+    color: var(--muted);
+}
+
 
 /* =========================================================
    MEDIA
